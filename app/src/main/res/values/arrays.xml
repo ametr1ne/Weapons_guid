@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="guns_array">
+        <item>Five-Seven</item>
+        <item>USP-S</item>
+    </string-array>
+
+    <string-array name="guns_array_availability">
+        <item>Counter-Terrorists</item>
+        <item>Counter-Terrorists</item>
+    </string-array>
+
+    <string-array name="rifles_array">
+        <item>Ak-47</item>
+        <item>M4A1</item>
+        <item>Famas</item>
+    </string-array>
+
+    <string-array name="rifles_array_availaibility">
+        <item>Terrorists</item>
+        <item>Counter-Terrorists</item>
+        <item>Counter-Terrorists</item>
+    </string-array>
+
+    <string-array name="weight_array">
+        <item>Negev</item>
+    </string-array>
+
+    <string-array name="weight_array_availability">
+        <item>Both</item>
+    </string-array>
+
+    <string-array name="others_array">
+        <item>Knife</item>
+    </string-array>
+
+    <string-array name="others_array_availability">
+        <item>Both</item>
+    </string-array>
+
+    <string-array name="main_text_size_array">
+        <item>Big</item>
+        <item>Middle</item>
+        <item>Small</item>
+    </string-array>
+</resources>
