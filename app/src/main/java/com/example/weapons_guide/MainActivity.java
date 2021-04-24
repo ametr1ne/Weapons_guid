@@ -50,17 +50,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         list = findViewById(R.id.listView);
-        array = getResources().getStringArray(R.array.guns_array);
-        availability_array = getResources().getStringArray(R.array.guns_array_availability);
         listItemMain = new ArrayList<>();
-        for (int i = 0;i<array.length;i++) {
-            listItem = new ListItemClass();
-            listItem.setName(array[i]);
-            listItem.setAvailability(availability_array[i]);
-            listItem.setImageId(array_guns_image[i]);
-
-            listItemMain.add(listItem);
-        }
+        fillArray(R.string.guns, getResources().getStringArray(R.array.guns_array), getResources().getStringArray(R.array.guns_array_availability),
+                array_guns_image, 0);
         adapter = new CustomArrayAdapter(this, R.layout.list_view_item, listItemMain, getLayoutInflater());
         list.setAdapter(adapter);
 
@@ -121,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
     private void fillArray (int title, String[] nameArray, String[] availabilityArray, int[] image, int index) {
         toolbar.setTitle(title);
-        adapter.clear();
+        if (adapter != null) adapter.clear();
         for (int i = 0;i<nameArray.length;i++) {
             listItem = new ListItemClass();
             listItem.setName(nameArray[i]);
@@ -129,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             listItem.setImageId(image[i]);
             listItemMain.add(listItem);
         }
-        adapter.notifyDataSetChanged();
+        if (adapter != null) adapter.notifyDataSetChanged();
         category_index = index;
     }
 }
